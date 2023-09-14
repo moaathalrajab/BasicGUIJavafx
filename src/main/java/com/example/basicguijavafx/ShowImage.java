@@ -16,7 +16,9 @@ public class ShowImage extends Application {
         // Create a pane to hold the image views
         Pane pane = new HBox(10);
         pane.setPadding(new Insets(5, 5, 5, 5));
-        Image image = new Image("/fsclogo.png");
+        Image image = new Image(
+                ShowImage.class.getClassLoader().getResource("fsc.png").toString()
+        );
 
         pane.getChildren().add(new ImageView(image));
 

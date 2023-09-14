@@ -1,17 +1,15 @@
 package com.example.basicguijavafx;
 
-
+import javafx.animation.FadeTransition;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
-public class CircleJavaFx extends Application {
-
-    // Todo 1: write var
-
+public class FadeObjectExample extends Application {
     int varx=10;
 
     @Override // Override the start method in the Application class
@@ -22,11 +20,19 @@ public class CircleJavaFx extends Application {
         circle.setCenterY(100);
         circle.setRadius(50);
         circle.setStroke(Color.BLACK); // Set circle stroke color
-        circle.setFill(Color.WHITE);
+        circle.setFill(Color.RED);
 
         // Create a pane to hold the circle
         Pane pane = new Pane();
         pane.getChildren().add(circle);
+
+
+        FadeTransition ft = new FadeTransition();
+        ft.setDuration(Duration.millis(5000));
+        ft.setNode(circle);
+        ft.setFromValue(1);
+        ft.setToValue(0);
+        ft.play();
 
         // Create a scene and place it in the stage
         Scene scene = new Scene(pane, 400, 400);
@@ -43,4 +49,3 @@ public class CircleJavaFx extends Application {
         launch(args);
     }
 }
-
