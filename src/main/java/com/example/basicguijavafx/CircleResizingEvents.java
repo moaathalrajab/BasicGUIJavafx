@@ -39,6 +39,8 @@ public class CircleResizingEvents extends Application {
 
         // Create a scene and place it in the stage
         Scene scene = new Scene(borderPane, 200, 150);
+        scene.getStylesheets().add(ShowImage.class.getClassLoader().getResource("newlook.css").toString());
+
         primaryStage.setTitle("Circle Resizing via Events"); // Set the stage title
         primaryStage.setScene(scene); // Place the scene in the stage
         primaryStage.show(); // Display the stage

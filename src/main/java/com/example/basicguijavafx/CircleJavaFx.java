@@ -30,6 +30,7 @@ public class CircleJavaFx extends Application {
 
         // Create a scene and place it in the stage
         Scene scene = new Scene(pane, 400, 400);
+
         primaryStage.setTitle("ShowCircle"); // Set the stage title
         primaryStage.setScene(scene); // Place the scene in the stage
         primaryStage.show(); // Display the stage
